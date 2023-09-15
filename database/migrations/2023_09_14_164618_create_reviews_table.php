@@ -17,6 +17,7 @@ return new class extends Migration
 		{
 			$table->id();
 			$table->foreignId('user_id')->constrained();
+			$table->foreignId('vet_id')->constrained();
 			$table->smallInteger('rate');
 			$table->string('comment');
 			$table->timestamps();
