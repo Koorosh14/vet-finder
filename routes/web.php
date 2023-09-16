@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [VetController::class, 'index']);
 
-Route::get('/vets/{vet}', function()
-{
-	return view('vets.show');
-});
+Route::get('/vets/{vet}', [VetController::class, 'show']);
