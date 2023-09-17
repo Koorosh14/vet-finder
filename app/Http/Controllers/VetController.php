@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vet;
-use Illuminate\Http\Request;
 
 class VetController extends Controller
 {
@@ -14,8 +13,10 @@ class VetController extends Controller
 		]);
 	}
 
-	public function show()
+	public function show(Vet $vet)
 	{
-		return view('vets.show');
+		return view('vets.show', [
+			'vet' => $vet,
+		]);
 	}
 }
