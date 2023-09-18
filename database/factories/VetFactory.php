@@ -21,6 +21,11 @@ class VetFactory extends Factory
 			'user_id' => User::all()->random()->id,
 			'name' => fake()->name(),
 			'description' => fake()->realText(),
+			'photo' => fake()->filePath(),
+			'latitude' => fake()->latitude(),
+			'longitude' => fake()->longitude(),
+			'address' => fake()->address(),
+			'work_hours' => fake()->time('H') . ' to ' . fake()->time('H'),
 		];
 	}
 }
