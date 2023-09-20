@@ -15,7 +15,7 @@ class VetController extends Controller
 	public function index()
 	{
 		return view('index', [
-			'vets' => Vet::all(),
+			'vets' => Vet::latest()->simplePaginate(5),
 		]);
 	}
 

@@ -21,4 +21,8 @@
 			</div>
 		</div>
 	@endunless
+
+	<div class="my-3 p-3">
+		{{$vets->links()}}
+	</div>
 </x-layout>
