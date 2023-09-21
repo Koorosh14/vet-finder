@@ -192,6 +192,9 @@
 								</svg>
 							</a>
 						</li>
+						<li>
+							@include('partials.search')
+						</li>
 						{{-- <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Product</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Features</a></li>
