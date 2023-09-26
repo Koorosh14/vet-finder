@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [VetController::class, 'index']);
+Route::get('/', [VetController::class, 'index'])->name('vets.index');
 
-Route::get('/vets/{vet}', [VetController::class, 'show']);
+Route::get('/vets/{vet}', [VetController::class, 'show'])->name('vets.show');
