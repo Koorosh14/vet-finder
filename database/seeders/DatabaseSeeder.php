@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Like;
 use App\Models\User;
 use App\Models\Vet;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -23,5 +24,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 		Vet::factory(10)->create();
+
+		Like::factory(50)->create();
     }
 }
