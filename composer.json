@@ -1,8 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "Vet Finder",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Find vets around you.",
     "license": "MIT",
     "require": {
         "php": "^8.2",
