@@ -51,6 +51,10 @@ class User extends Authenticatable
 	/**
 	 * Returns all the vets that this user have posted.
 	 *
+	 * To test and see if this is working:
+	 * 		php artisan tinker
+	 * 		\App\Models\User::all()->get(0)->vets
+	 *
 	 * @return	HasMany
 	 */
 	public function vets(): HasMany
