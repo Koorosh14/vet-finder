@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -46,4 +47,34 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+	/**
+	 * Returns all the vets that this user have posted.
+	 *
+	 * @return	HasMany
+	 */
+	public function vets(): HasMany
+	{
+		return $this->hasMany(Vet::class);
+	}
+
+	/**
+	 * Returns all the likes that this user have submitted.
+	 *
+	 * @return	HasMany
+	 */
+	public function likes(): HasMany
+	{
+		return $this->hasMany(Like::class);
+	}
+
+	/**
+	 * Returns all the reviews that this user have posted.
+	 *
+	 * @return	HasMany
+	 */
+	public function reviews(): HasMany
+	{
+		return $this->hasMany(Review::class);
+	}
 }
